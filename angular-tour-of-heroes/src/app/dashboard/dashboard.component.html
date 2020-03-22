@@ -1,0 +1,8 @@
+<h3>Top Heroes</h3>
+<app-hero-search></app-hero-search>
+<mat-grid-list cols="4" rowHeight="150px" gutterSize="15px">
+    <mat-grid-tile *ngFor="let hero of heroes" [colspan]="1" [rowspan]="1" routerLink="/detail/{{hero.id}}">
+        <mat-grid-tile-header>{{hero.name}}</mat-grid-tile-header>
+        <span>Bad Guys Stopped: {{hero.points}}</span>
+    </mat-grid-tile>
+</mat-grid-list>
